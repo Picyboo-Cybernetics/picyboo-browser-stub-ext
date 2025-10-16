@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "PICYBOO Sandbox Extension",
+  "version": "0.1.0",
+  "description": "PICYBOO\u00ae demo extension (sandbox).",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "48": "icon48.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ]
+}
