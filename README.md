@@ -48,3 +48,8 @@ The stub keeps all data on-device and never transmits browsing information. Revi
 
 ## Legal
 © Picyboo Cybernetics. MIT License. PICYBOO® — US 97338199 / CA 2173851.
+
+## Links
+- Website: https://picyboo.com
+- Technical Sandbox: https://picyboo.net
+- GitHub Organization: https://github.com/Picyboo-Cybernetics
