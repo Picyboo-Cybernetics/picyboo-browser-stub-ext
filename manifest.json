@@ -1,16 +1,22 @@
 {
   "manifest_version": 3,
-  "name": "PICYBOO Sandbox Extension",
-  "version": "0.1.0",
-  "description": "PICYBOO\u00ae demo extension (sandbox).",
+  "name": "PICYBOO Browser Stub Extension (MV3)",
+  "version": "0.2.0",
+  "description": "Demonstration extension for curating audit-ready inspiration captures.",
   "action": {
     "default_popup": "popup.html"
   },
   "icons": {
     "48": "icon48.png"
   },
+  "background": {
+    "service_worker": "background.js"
+  },
   "permissions": [
     "activeTab",
-    "scripting"
+    "scripting",
+    "storage",
+    "contextMenus",
+    "tabs"
   ]
 }
