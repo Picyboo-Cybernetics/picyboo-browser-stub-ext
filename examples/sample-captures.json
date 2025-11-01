@@ -1,0 +1,14 @@
+[
+  {
+    "id": "popup-2025-11-01T12:00:00.000Z",
+    "createdAt": "2025-11-01T12:00:00.000Z",
+    "url": "https://example.com/inspiration",
+    "title": "Inspiration – Example Studio",
+    "favIconUrl": "https://example.com/favicon.ico",
+    "tags": ["design", "onboarding"],
+    "note": "Seed concept for guided onboarding visuals.",
+    "confidence": 4,
+    "hash": "5aeac95be5c9950b66bb784b8a11ef91af0ef2c87410c2f721ff5b76d884e8aa",
+    "source": "popup"
+  }
+]

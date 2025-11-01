@@ -1,7 +1,70 @@
-<!doctype html><meta charset="utf-8">
-<title>PICYBOO Verify</title>
-<style>body{font-family:system-ui;min-width:260px;padding:10px}</style>
-<h3>PICYBOO Verify</h3>
-<button id="go">Verify</button>
-<pre id="out">—</pre>
-<script src="popup.js"></script>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>PICYBOO Browser Stub Extension (MV3)</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">Internal research tool</p>
+        <h1>PICYBOO Capture</h1>
+        <p class="subtitle">Curate inspiration with audit-ready metadata.</p>
+      </div>
+      <span class="badge" id="vaultCount">0</span>
+    </header>
+
+    <main class="app-main">
+      <section class="panel">
+        <div class="field">
+          <label>Active page</label>
+          <div class="active-meta">
+            <p class="title" id="pageTitle">—</p>
+            <a class="url" id="pageUrl" href="#" target="_blank" rel="noopener">—</a>
+            <p class="hash" id="pageHash">Hash pending…</p>
+          </div>
+        </div>
+
+        <form id="captureForm" autocomplete="off">
+          <div class="field">
+            <label for="tags">Tags</label>
+            <input id="tags" name="tags" type="text" placeholder="design, inspiration, onboarding" aria-describedby="tagsHelp">
+            <p class="help" id="tagsHelp">Separate with commas. We auto-normalize casing.</p>
+          </div>
+
+          <div class="field">
+            <label for="note">Research note</label>
+            <textarea id="note" name="note" rows="3" placeholder="What makes this capture relevant?" aria-describedby="noteHelp"></textarea>
+            <p class="help" id="noteHelp">Notes stay on-device until you export a vault snapshot.</p>
+          </div>
+
+          <div class="field">
+            <label for="confidence">Confidence</label>
+            <div class="slider-row">
+              <input id="confidence" name="confidence" type="range" min="1" max="5" value="3" step="1" aria-describedby="confidenceDescriptor">
+              <output id="confidenceValue" for="confidence">3</output>
+            </div>
+            <p class="help" id="confidenceDescriptor">Balanced signal</p>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="primary">Sync to Vault</button>
+            <button type="button" class="ghost" id="exportVault">Export JSON</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="status" id="statusPanel" aria-live="polite">
+        <p class="status-message" id="statusMessage">Preparing capture context…</p>
+        <pre class="status-preview" id="statusPreview">Awaiting first capture.</pre>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>Data never leaves this device. Review the privacy notes in the repository.</p>
+    </footer>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
